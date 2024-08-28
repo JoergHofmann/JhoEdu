@@ -13,17 +13,19 @@ Mein Ziel, das vielbeschworene Single-source-publishing, Skripte als PDF oder in
 
 * [*ypp*](https://cdelord.fr/ypp.html), ein einfacher Preprozessor, der mit Lua-Funktionen erweitert werden kann.
 
-* *pandoc*
+* [*pandoc*](https://pandoc.org)
 
-* *Apache Ant*
+* [*Apache Ant*](https://ant.apache.org)
 
-* *ConTeXt*
+* [*ConTeXt*](https://wiki.contextgarden.net)
 
-* *Lua*
+* [*Lua*](https://www.lua.org)
 
-* *NodeJs*
+* [*NodeJs*](https://nodejs.org)
 
-* *HUGO*
+* [*HUGO*](https://gohugo.io)
+
+* [*LiaScript*](https://liascript.github.io)
 
 # Module
 
