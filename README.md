@@ -15,6 +15,8 @@ Mein Ziel, das vielbeschworene Single-source-publishing, Skripte als PDF oder in
 
 * [*pandoc*](https://pandoc.org)
 
+* [*panda*](https://github.com/CDSoft/panda), ein Lua-Filter mit ähnlichen Funktionen wie *ypp*.
+
 * [*Apache Ant*](https://ant.apache.org)
 
 * [*ConTeXt*](https://wiki.contextgarden.net)
@@ -29,9 +31,15 @@ Mein Ziel, das vielbeschworene Single-source-publishing, Skripte als PDF oder in
 
 # Module
 
-## jhomarkup
+## jho-ypp
 
-Sammlung von Skripten für den [ypp Preprozessor](https://cdelord.fr/ypp.html) um Unterrichtsmaterial zu erstellen. Weitere Bearbeitung mit [Pandoc](https://pandoc.org/).
+Sammlung von Skripten für den *ypp Preprozessor* um Unterrichtsmaterial zu erstellen. Weitere Bearbeitung mit *Pandoc*.
+
+
+## jho-panda
+
+Wie *jho-ypp*, aber für *pandoc* mit Lua-Filter.
+
 
 ## jho-praesentation: Präsentationen mit Markdown und ypp
 

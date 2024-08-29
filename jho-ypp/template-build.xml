@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="wiedereinstieg" default="html">
+
+	<target name="prepare">
+		<property environment="env" />
+		<delete includeemptydirs="true">
+			<fileset dir="0_TMP" includes="*"/>
+			<fileset dir="0_OUT" includes="*" />
+		</delete>
+	    </target>
+
+	<target name="upp4html" unless="done">
+		<exec executable="upp" output="0_TMP/${ant.project.name}.md" logError="true">
+			<arg line="-l html5.lua ${ant.project.name}.md" />
+		</exec>
+	</target>
+
+	<target name="upp4moodle" unless="done">
+		<exec executable="upp" output="0_TMP/${ant.project.name}.md" logError="true">
+			<arg line="-l moodle.lua ${ant.project.name}.md" />
+		</exec>
+	</target>
+
+	<target name="upp4hugo" unless="done">
+		<exec executable="upp" output="0_TMP/${ant.project.name}.md" logError="true">
+			<arg line="-l hugo.lua ${ant.project.name}.md" />
+		</exec>
+	</target>
+
+	<target name="pandoc4html" unless="done">
+		<exec executable="pandoc" dir="0_TMP/">
+			<arg line="${ant.project.name}.md -t html --template=jho -H ../includes/inc.html -s -o ${ant.project.name}.html" />
+		</exec>
+	</target>
+	<target name="copy4html" unless="done">
+		<copy todir="0_TMP" >
+			<fileset dir=".">
+				<include name="*.lua" />
+			</fileset>
+			<fileset dir="scripts/">
+				<include name="*.js" />
+			</fileset>
+			<fileset dir="formate/">
+				<include name="*.css" />
+			</fileset>
+			<fileset dir=".">
+				<include name="*.yaml" />
+			</fileset>
+			<fileset dir=".">
+				<include name="*.html" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="make-html" unless="done">
+	    	<echo message='Target: make-html'/>
+		<antcall target="copy4html" />
+	    	<echo message='Starte "upp" '/>
+		<antcall target="upp4html" />
+	    	<echo message='Starte "pandoc" '/>
+		<antcall target="pandoc4html" />
+	</target>
+
+	<target name="html" depends="prepare" unless="done">
+	    	<echo message="Target: html"/>
+		<delete includeemptydirs="true">
+			<fileset dir="${env.local_www_dir}/${ant.project.name}" includes="*" />
+		</delete>
+		<antcall target="make-html" />
+		<copy file="0_TMP/${ant.project.name}.html" tofile="${env.local_www_dir}/${ant.project.name}/index.html" overwrite="true" />
+		<copy todir="${env.local_www_dir}/${ant.project.name}/formate/" overwrite="true">
+			<fileset dir="0_TMP" includes="*.css" />
+		</copy>
+		<copy todir="${env.local_www_dir}/${ant.project.name}/scripts/" overwrite="true">
+			<fileset dir="0_TMP" includes="*.js" />
+		</copy>
+		<copy todir="${env.local_www_dir}/${ant.project.name}/bilder" overwrite="true">
+			<fileset dir="bilder" includes="*.png" />
+		</copy>
+		<property name="done" value="done" />
+	</target>
+
+	<target name="moodle" depends="prepare" unless="done">
+	    	<echo message="Target: moodle"/>
+		<delete includeemptydirs="true">
+			<fileset dir="${env.local_www_dir}/${ant.project.name}" includes="*" />
+		</delete>
+		<antcall target="copy4html" />
+		<antcall target="upp4moodle" />
+		<antcall target="pandoc4html" />
+		<copy file="0_TMP/${ant.project.name}.html" tofile="${env.local_www_dir}/${ant.project.name}/index.html" overwrite="true" />
+		<copy todir="${env.local_www_dir}/${ant.project.name}/formate/" overwrite="true">
+			<fileset dir="0_TMP" includes="*.css" />
+		</copy>
+		<copy todir="${env.local_www_dir}/${ant.project.name}/scripts/" overwrite="true">
+			<fileset dir="0_TMP" includes="*.js" />
+		</copy>
+		<copy todir="${env.local_www_dir}/${ant.project.name}/bilder" overwrite="true">
+			<fileset dir="bilder" includes="*.*" />
+		</copy>
+		<property name="done" value="done" />
+	</target>
+
+	<target name="make-pdf" unless="done">
+	    	<echo message="Target: make-pdf"/>
+		<copy todir="0_TMP" >
+			<fileset dir=".">
+				<include name="*.lua" />
+			</fileset>
+			<fileset dir=".">
+				<include name="*.yaml" />
+			</fileset>
+			<fileset dir=".">
+				<include name="*.tex" />
+			</fileset>
+			<fileset dir="./bilder">
+				<include name="*.png" />
+				<include name="*.pdf" />
+			</fileset>
+		    </copy>
+	    	<echo message='Starte "upp" '/>
+		<exec executable="upp" output="0_TMP/${ant.project.name}.md" logError="true">
+			<arg line="-l context.lua ${ant.project.name}.md" />
+		</exec>
+	    	<echo message='Starte "pandoc" '/>
+		<exec executable="pandoc" dir="0_TMP/">
+			<arg line="${ant.project.name}.md -t context+ntb --template=jho -s -o ${ant.project.name}.tex" />
+		</exec>
+	    	<echo message='Starte "context" '/>
+		<exec executable="context" dir="0_TMP/">
+			<arg line="${ant.project.name}.tex --result=${ant.project.name}.pdf" />
+		</exec>
+	    </target>
+
+	    <target name="pdf" depends="prepare" unless="done">
+	    	<echo message="Target: pdf"/>
+		<antcall target="make-pdf" />
+		<move file="0_TMP/${ant.project.name}.pdf" tofile="0_OUT/${ant.project.name}.pdf" />
+		<property name="done" value="done" />
+	    </target>
+
+	    <target name="upload" depends="prepare" unless="done">
+		<echo message="Target: upload" />
+		<antcall target="make-pdf" />
+		<copy file="0_TMP/${ant.project.name}.pdf" tofile="${env.local_sync_dir}/${ant.project.name}/docs/${ant.project.name}.pdf" />
+		<antcall target="make-html" />
+		<copy file="0_TMP/${ant.project.name}.html" tofile="${env.local_sync_dir}/${ant.project.name}/index.html" overwrite="true" />
+		<copy todir="${env.local_sync_dir}/${ant.project.name}/formate/" overwrite="true">
+			<fileset dir="0_TMP" includes="*.css" />
+		</copy>
+		<copy todir="${env.local_sync_dir}/${ant.project.name}/scripts/" overwrite="true">
+			<fileset dir="0_TMP" includes="*.js" />
+		</copy>
+		<copy todir="${env.local_sync_dir}/${ant.project.name}/bilder" overwrite="true">
+			<fileset dir="bilder" includes="*.*" />
+		</copy>
+		<property name="done" value="done" />
+	    </target>
+
+</project>
