@@ -12,7 +12,7 @@
 
 
 	<target name="test" unless="done">
-		<exec executable="upp" output="0_TMP/${ant.project.name}.md">
+		<exec executable="ypp" output="0_TMP/${ant.project.name}.md">
 			<arg line="-l jhomarkup.lua -l html5.lua -l ModeSlides.lua TestText.md" />
 		</exec>
 		<property name="done" value="done" />

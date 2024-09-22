@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta />
+    <title></title>
+    <!-- gegebenenfalls andere Elemente im Kopfbereich -->
+    <!-- <script src="scripts/loesung.js"></script> -->
+    <script src="Sortable.js" defer></script>
+    <script src="jho-sortable3.js" defer></script>
+    <link rel="stylesheet" href="sortable3.css" />
+
+  </head>
+  <body>
+	<div id="liste" class="container">
+		<div class="kopfzeile">
+			<span class="bezeichnung">Bezeichung</span>
+			<span class="menge">Menge</span>
+			<span class="zahlenspalte">Wert</span>
+			<span class="zahlenspalte">Gesamt</span>
+  	 	</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Vermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Anlagevermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Umlaufvermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Summe Anlagevermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Summe Umlaufvermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Summe Vermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Schulden</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Summe Schulden</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Reinvermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Summe Vermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Summe Schulden</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Reinvermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Grundstück, Speiergarten 13, 65191 Wiesbaden</span>
+			<span class = "menge">1</span>
+        	        <span class = "zahlenspalte">55329</span>
+                	<span class = "zahlenspalte">55329</span>
+		</div>
+		<div class = "listen-element">
+			<span class = "bezeichnung">Gebäude, Speiergarten 13, 65191 Wiesbaden</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">1324566</span>
+			<span class = "zahlenspalte">1324566</span>
+		</div>
+<!--                          Bezeichnung: "Ätzbad für Platinen"
+                          Menge: 2
+                          Rang: 5
+                          Wert: 1940
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0200"       
+                        - 
+                          Bezeichnung: "Lötautomat"
+                          Menge: 4
+                          Rang: 5
+                          Wert: 2890
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0200"       
+                        - 
+                          Bezeichnung: "UV-Belichter für Platinen"
+                          Menge: 1
+                          Rang: 5
+                          Wert: 2320
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0200"       
+                        - 
+                          Bezeichnung: "PKW WI-DM 987"
+                          Menge: 1
+                          Rang: 6
+                          Wert: 1
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0320"        
+                        - 
+                          Bezeichnung: "PKW WI-FS 987"
+                          Menge: 1
+                          Rang: 6
+                          Wert: 1
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0320"        
+                        - 
+                          Bezeichnung: "PKW WI-SD 987"
+                          Menge: 1
+                          Rang: 6
+                          Wert: 1
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0320"        
+                        - 
+                          Bezeichnung: "Transporter WI-RP 987"
+                          Menge: 1
+                          Rang: 6
+                          Wert: 67800
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0320"        
+                        - 
+                          Bezeichnung: "Aktenschränke"
+                          Menge: 12
+                          Rang: 7
+                          Wert: 680
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0420"       
+                        - 
+                          Bezeichnung: "Buchhaltungsprogramm"
+                          Menge: 1
+                          Rang: 7
+                          Wert: 1645
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "EDV-Software"        
+                        - 
+                          Bezeichnung: "Kassenterminal"
+                          Menge: 2
+                          Rang: 7
+                          Wert: 879
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0425"        
+                        - 
+                          Bezeichnung: "PC-Arbeitsplatz"
+                          Menge: 4
+                          Rang: 7
+                          Wert: 620
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0027 "        
+                        - 
+                          Bezeichnung: "Regale, Verkaufsraum"
+                          Menge: 6
+                          Rang: 7
+                          Wert: 320
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0430"        
+                        - 
+                          Bezeichnung: "Rollcontainer"
+                          Menge: 4
+                          Rang: 7
+                          Wert: 180
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0420"        
+                        - 
+                          Bezeichnung: "Schreibtische"
+                          Menge: 4
+                          Rang: 7
+                          Wert: 170
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0420"        
+                        - 
+                          Bezeichnung: "Schreibtischstühle „Rückenfreund“"
+                          Menge: 4
+                          Rang: 7
+                          Wert: 260
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0420"        
+                        - 
+                          Bezeichnung: "Server"
+                          Menge: 1
+                          Rang: 7
+                          Wert: 2100
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0425"        
+                        - 
+                          Bezeichnung: "Verkaufstheke"
+                          Menge: 1
+                          Rang: 7
+                          Wert: 570
+                          VS: "v"  
+                          AvUv: "a"  
+                          Konto: "0430" -->        
+	</div>
+  </body>
+</html>

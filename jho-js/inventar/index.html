@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta />
+    <title></title>
+    <!-- gegebenenfalls andere Elemente im Kopfbereich -->
+    <!-- <script src="scripts/loesung.js"></script> -->
+    <script src="scripts/Sortable.js" defer></script>
+    <script src="scripts/jho-sortable3.js" defer></script>
+    <link rel="stylesheet" href="formate/sortable3.css" />
+
+  </head>
+  <body>
+  	<section id="{{AgId}}" class="invListe">
+		<form id="f{{AgId}}" name="f{{AgId}}">
+		<div id="liste" class="container"}>
+			<div class="kopfzeile">
+				<span style = "width: 2rem; height: 2rem; margin: 0 2rem 0 0;"></span>
+				<span class="bezeichnung">Bezeichung</span>
+				<span class="menge">Menge</span>
+				<span class="zahlenspalte">Wert</span>
+				<span class="zahlenspalte">Gesamt</span>
+  		 	</div>
+
+			<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+				<span class = "bezeichnung"><h2>Vermögen</h2></span>
+				<span class = "menge"></span>
+        	        	<span class = "zahlenspalte"></span>
+ 		               	<span class = "zahlenspalte"></span>
+			</div>
+
+			<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+				<span class = "bezeichnung"><h3>Anlagevermögen</h3></span>
+				<span class = "menge"></span>
+        	        	<span class = "zahlenspalte"></span>
+	                	<span class = "zahlenspalte"></span>
+			</div>
+
+			<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+				<span class = "bezeichnung"><h3>Umlaufvermögen</h3></span>
+				<span class = "menge"></span>
+        		        <span class = "zahlenspalte"></span>
+                		<span class = "zahlenspalte"></span>
+			</div>
+
+ 		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Summe Anlagevermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Summe Umlaufvermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Summe Vermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung"><h2>Schulden</h2></span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Summe Schulden</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung"><h2>Reinvermögen</h2></span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Vermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Schulden</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Reinvermögen</span>
+			<span class = "menge"></span>
+        	        <span class = "zahlenspalte"></span>
+                	<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Grundstück, Speiergarten 13, 65191 Wiesbaden</span>
+			<span class = "menge">1</span>
+        	        <span class = "zahlenspalte">55329</span>
+                	<span class = "zahlenspalte">55329</span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Gebäude, Speiergarten 13, 65191 Wiesbaden</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">1324566</span>
+			<span class = "zahlenspalte">1324566</span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Ätzbad für Platinen</span>
+			<span class = "menge">2</span>
+                        <span class = "zahlenspalte">1940</span>
+                        <span class = "zahlenspalte"> </span>  
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+                        <span class = "bezeichnung">Lötautomat</span>
+			<span class = "menge">4</span>
+			<span class = "zahlenspalte">2890</span>
+			<span class = "zahlenspalte"> </span>  
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">UV-Belichter für Platinen</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">2320</span>
+                        <span class = "zahlenspalte"> </span>  
+		</div>
+                         
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">PKW WI-DM 987</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">1</span>
+			<span class = "zahlenspalte"> </span>  
+		</div>
+                         
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">PKW WI-FS 987</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">1</span>
+			<span class = "zahlenspalte"> </span>  
+		</div>
+                         
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">PKW WI-SD 987</span>
+                        <span class = "menge">1</span>
+                        <span class = "zahlenspalte">1</span>
+			<span class = "zahlenspalte"> </span>  
+		</div>
+                         
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Transporter WI-RP 987</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">67800</span>
+                         <span class = "zahlenspalte"> </span>  
+		</div>
+                         
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Aktenschränke</span>
+			<span class = "menge">12</span>
+			<span class = "zahlenspalte">680</span>
+			<span class = "zahlenspalte"> </span>  
+		</div>
+                         
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Buchhaltungsprogramm</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">1645</span>  
+			<span class = "zahlenspalte"> </span>  
+		</div>
+                         
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Kassenterminal</span>
+			<span class = "menge">2</span>
+                        <span class = "zahlenspalte">879</span>
+                         <span class = "zahlenspalte"> </span>  
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+                     <span class = "bezeichnung">PC-Arbeitsplatz</span>
+                      <span class = "menge">4</span>
+                         <span class = "zahlenspalte">620</span>  
+                         <span class = "zahlenspalte"> </span>  
+		</div>
+                         
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Regale, Verkaufsraum</span>
+			<span class = "menge">6</span>
+                        <span class = "zahlenspalte">320</span>
+			<span class = "zahlenspalte"> </span>  
+		</div>
+                         
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Rollcontainer</span>
+			<span class = "menge">4</span>
+			<span class = "zahlenspalte">180</span>
+			<span class = "zahlenspalte"> </span>  
+		</div>
+                         
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Schreibtische</span>
+                        <span class = "menge">4</span>
+                        <span class = "zahlenspalte">170</span>
+			<span class = "zahlenspalte"> </span>  
+		</div>
+ 
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Schreibtischstühle „Rückenfreund</span>
+			<span class = "menge">4</span>
+                        <span class = "zahlenspalte">260</span>
+			<span class = "zahlenspalte"> </span>  
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Server</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">2100</span>
+                         <span class = "zahlenspalte"> </span>  
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Verkaufstheke</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">570</span>
+			<span class = "zahlenspalte"> </span>  
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Festposten Kleinteile</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">540</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Gehäuse „Chip"</span>
+			<span class = "menge">17</span>
+			<span class = "zahlenspalte">43</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Gehäuse „Röhre 1"</span>
+			<span class = "menge">22</span>
+			<span class = "zahlenspalte">91</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Gehäuse „Röhre 2"</span>
+			<span class = "menge">18</span>
+			<span class = "zahlenspalte">89</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Leerplatinen</span>
+			<span class = "menge">60</span>
+			<span class = "zahlenspalte">4.3</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Röhren RD2</span>
+			<span class = "menge">130</span>
+			<span class = "zahlenspalte">2.1</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Verstärker-Chip QWR23</span>
+			<span class = "menge">171</span>
+			<span class = "zahlenspalte">0.9</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Stereoverstärker „Chip“</span>
+			<span class = "menge">15</span>
+			<span class = "zahlenspalte">345</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Stereoverstärker „Röhre 1“</span>
+			<span class = "menge">8</span>
+			<span class = "zahlenspalte">1830</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Stereoverstärker „Röhre 2“</span>
+			<span class = "menge">6</span>
+			<span class = "zahlenspalte">2015</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">CD-Player „Scheibenmann“</span>
+			<span class = "menge">8</span>
+			<span class = "zahlenspalte">322.1</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">CD-Player, portable</span>
+			<span class = "menge">4</span>
+			<span class = "zahlenspalte">22.7</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Digitaltuner „Äther“</span>
+			<span class = "menge">3</span>
+			<span class = "zahlenspalte">566.9</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Kopfhörer</span>
+			<span class = "menge">9</span>
+			<span class = "zahlenspalte">69.5</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">"Plattenspieler „old school“"</span>
+			<span class = "menge">10</span>
+			<span class = "zahlenspalte">755.4</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Regalboxen RB4711</span>
+			<span class = "menge">7</span>
+			<span class = "zahlenspalte">145.3</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Standbox SB0815</span>
+			<span class = "menge">14</span>
+			<span class = "zahlenspalte">321.45</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Forderungen LuL</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">67340</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Kasse Büro</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">1150</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Wechselgeld, Kasse 1</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">800</span>
+			<span class = "zahlenspalte">
+		</div>
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Wechselgeld, Kasse 2</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">550</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Nassauische Sparkasse, 654 332 116</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">21500</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Postbank AG, 445 332 100</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">7550</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">Hypothekendarlehen, Nassauische Sparkasse, 876 345 222</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">730960</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">"Darlehen, Nassauische Sparkasse, 876 345 371"</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">176500</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">"Umsatzsteuer Vorjahr"</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">3210</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+
+		<div class = "listen-element"><img class="my-handle" src = "bilder/my-handle.svg" />
+			<span class = "bezeichnung">"Verbindlichkeiten LuL"</span>
+			<span class = "menge">1</span>
+			<span class = "zahlenspalte">43785</span>
+			<span class = "zahlenspalte"></span>
+		</div>
+	</div>
+	</form>
+	</section>
+  </body>
+</html>

@@ -17,21 +17,19 @@ Autor['ort'] = 'Wiesbaden'
 Autor['tel'] = '+49 611 507411'
 Autor['mobil'] = '+49 176 27810343'
 Autor['fax'] = '+49 611 94939032'
-Autor['mail'] = 'joerg.hofmann@pecunia-non-olet.com'
+Autor['mail'] = 'joerg.hofmann@jho-home.de'
 Autor['name'] = Autor['vorname'] .. " " .. Autor['nachname']
-Autor['firma'] = "pecunia-non-olet.com"
 Autor['logo'] = 'ich-zeichnung.png'
-Autor['www'] = 'pecunia-non-olet.com'
-
-Firma = {}
-Firma['name'] = 'pecunia-non-olet.com'
-Firma['strasse'] = 'Am Schloßpark 78'
-Firma['plz'] = '65203'
-Firma['ort'] = 'Wiesbaden'
-Firma['tel'] = '+49 611 507411'
-Firma['fax'] = '+49 611 94939032'
-Firma['www'] = 'https:\\\\pecunia-non-olet.com'
-Firma['mail'] = 'info@pecunia-non-olet.com'
+Autor['www'] = 'jho-home.de'
+Autor['Firma'] = {}
+	Autor.Firma{'name'} = 'pecunia-non-olet.com'
+	Autor.Firma{'strasse'} = 'Am Schloßpark 78'
+	Autor.Firma{'plz'} = '65203'
+	Autor.Firma{'ort'} = 'Wiesbaden'
+	Autor.Firma{'tel'} = '+49 611 507411'
+	Autor.Firma{'fax'} = '+49 611 94939032'
+	Autor.Firma{'www'} = 'https:\\\\pecunia-non-olet.com'
+	Autor.Firma{'mail'} = 'info@pecunia-non-olet.de'
 --**}
 
 -- Variable ========================================================================================================= {**
